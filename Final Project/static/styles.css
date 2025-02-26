@@ -1,0 +1,118 @@
+/* Reset and Basic Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+.input-group input[type="file"] {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group input[type="file"]:hover {
+    background-color: #e0e0e0;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.video-wrapper {
+    width: 48%;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.video-wrapper h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+#processButton {
+    z-index: 10;  /* Ensure it's on top */
+    position: relative;  /* Position it above other content */
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#processButton:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-wrapper {
+        width: 100%;
+    }
+}

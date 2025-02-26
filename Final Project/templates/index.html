@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drunk Walking Video Detection</title>
+    <!-- Link to the CSS file using url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Drunk Walking Video Detection</h1>
+
+    <div class="input-group">
+        <label for="inputVideo">Select a Video File:</label>
+        <input type="file" id="inputVideo" accept="video/*">
+    </div>
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <h3>Original Video</h3>
+            <video id="videoPreview" controls></video>
+        </div>
+        <div class="video-wrapper">
+            <h3>Processed Video</h3>
+            <video id="outputVideo" controls></video>
+        </div>
+    </div>
+
+    <button id="processButton">Process Video</button>
+
+    <!-- Section to display the classification result -->
+    <div id="resultSection" style="display:none; text-align: center; margin-top: 20px;">
+        <h2>Prediction Result: <span id="predictionLabel"></span></h2>
+        <p>Probability: <span id="predictionProbability"></span></p>
+    </div>
+
+</div>
+
+<!-- Include the JavaScript file using url_for -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
